@@ -1,0 +1,1 @@
+import 'package:bookly_apps/features/home/ui/views/component/widgets__screen2/screen2__item.dart';import 'package:flutter/material.dart';class screen2__body extends StatelessWidget {  const screen2__body({super.key});  @override  Widget build(BuildContext context) {    return Column(children: [      screen2_item()    ],);  }}
