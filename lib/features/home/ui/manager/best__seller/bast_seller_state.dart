@@ -1,26 +1,26 @@
-import "package:bookly_apps/features/home/data/model/books.dart";
-import "package:flutter/cupertino.dart";
-
-abstract class best_sellerState {}
-  class best_sellerInitial extends best_sellerState {}
-
-  class best_sellerLoading extends best_sellerState {}
 
 
+import 'package:bookly_apps/features/home/data/model/books.dart';
+
+abstract  class best__seller_state{}
+
+class best__seller_initial extends best__seller_state{}
+
+class best__seller_loading extends best__seller_state{}
 
 
-  class best_sellerSuccess extends best_sellerState {
+class best__seller_success extends best__seller_state{
   final List<BookModel> books;
 
-  best_sellerSuccess( this.books);
-  }
+  best__seller_success(this.books);
+}
 
-
-
-
-  class best_sellerError extends best_sellerState {
+class best__seller_error extends best__seller_state{
   final String error;
 
-  best_sellerError(this.error);
-  }
+  best__seller_error(this.error);
+}
+
+
+
 

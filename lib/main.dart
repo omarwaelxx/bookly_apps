@@ -5,24 +5,28 @@ import 'package:bookly_apps/features/home/ui/manager/best__seller/bast_seller_st
 import 'package:bookly_apps/features/home/ui/views/component/home__screen.dart';
 import 'package:bookly_apps/features/home/ui/views/screen2__screen.dart';
 import 'package:bookly_apps/features/splash/ui/views/splach_screen.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'features/home/ui/manager/best__seller/bast_seller_cubit.dart';
 
-void main(){runApp( booklyApp());}
+
+void main(){
+  runApp( booklyApp());}
+
+
 class booklyApp extends StatelessWidget {
-  const booklyApp({super.key});
+   booklyApp({super.key});
+  final Dio dio = Dio();
 
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(providers:[
-      BlocProvider(create: (context)=>AllBooksCubit(HomeRepoImpl)(ApiService(dio)) ),
+      BlocProvider(create: (context)=>AllBooksCubit(HomeRepoImpl(apiService:ApiService(dio)))..getAllBooks() ),
 
-      BlocProvider(create: (context)=> best_sellerState(HomeRepoImpl)(ApiService(dio)) ),],
-
-
-
+      BlocProvider(create: (context)=> best__seller_cubit(HomeRepoImpl(apiService:ApiService(dio))) ),],
 
     child:MaterialApp(
         debugShowCheckedModeBanner:false ,
