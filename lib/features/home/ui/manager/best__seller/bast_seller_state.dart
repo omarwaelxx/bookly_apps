@@ -4,7 +4,7 @@ import 'package:bookly_apps/features/home/data/model/books.dart';
 
 abstract  class best__seller_state{}
 
-class best__seller_initial extends best__seller_state{}
+class  best__seller_initial extends best__seller_state{}
 
 class best__seller_loading extends best__seller_state{}
 

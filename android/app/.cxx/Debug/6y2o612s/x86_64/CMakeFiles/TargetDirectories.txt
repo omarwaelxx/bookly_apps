@@ -1,0 +1,2 @@
+D:/bookly_apps/android/app/.cxx/Debug/6y2o612s/x86_64/CMakeFiles/edit_cache.dir
+D:/bookly_apps/android/app/.cxx/Debug/6y2o612s/x86_64/CMakeFiles/rebuild_cache.dir
